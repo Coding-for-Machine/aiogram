@@ -51,3 +51,41 @@ async def main():
 asyncio.run(main())
 ```
 
+### 3-Misol
+```python
+import logging
+import asyncio
+from aiogram import Bot, Dispatcher, types
+from aiogram.filters import CommandStart
+
+bot = Bot(token="7670506830:AAFXJsvNNew85PS8dJdlWf8geSLtav3SDeI") # <  tokenni qavuslar orasiga qo'ying
+dp = Dispatcher()
+
+@dp.message(CommandStart()) # <  Dispatcher Decorators vazifani bajaradi
+async def cmd_start(m: types.Message):
+    await m.answer("Bu Start Cmd")
+    
+async def main():
+    await dp.start_polling(bot)
+
+start_text = """"
+          [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+          [ ][ ][0][0][ ][ ][ ][0][0][0][ ][ ][0][ ][ ][ ][ ][0][ ]
+          [ ][0][ ][ ][0][ ][ ][0][ ][ ][ ][ ][0][0][ ][ ][0][0][ ]
+          [ ][0][ ][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ][0][0][ ][0][ ]
+          [ ][0][ ][ ][ ][ ][ ][0][0][0][ ][ ][0][ ][  0 ][ ][0][ ]
+          [ ][0][ ][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ]
+          [ ][0][ ][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ]
+          [ ][0][ ][ ][0][ ][ ][0][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ]
+          [ ][ ][0][0][ ][ ][ ][0][ ][ ][ ][ ][0][ ][ ][ ][ ][0][ ]
+          [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+          """
+if __name__ == '__main__':
+    try:
+        print("exit", start_text)
+        logging.basicConfig(level=logging.INFO) # 3   misolda qo'shildi. loyihamiz ishlayotganligi va ko'plam malumotlarni consolga chiqaradi 
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("[ ][ ][ ][ ][ ][ ][ ][ ][------ EXIT -----][ ][ ][ ][ ][ ][ ][ ][ ][ ]")
+```
+
