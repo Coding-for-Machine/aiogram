@@ -1,5 +1,5 @@
 ## Aiogram 1-dars
-
+*** Project ni barcha file ni ishga tushiradigan file yaratamiz ***
 ```bash
 python3 -m venv myenv
 source myenv/bin/activate
