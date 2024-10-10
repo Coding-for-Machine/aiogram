@@ -58,7 +58,7 @@ import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 
-bot = Bot(token="7670506830:AAFXJsvNNew85PS8dJdlWf8geSLtav3SDeI") # <  tokenni qavuslar orasiga qo'ying
+bot = Bot(token="7670506830:AAFvNNew85PS8dJdlWf8geSLtav3SDeI") # <  tokenni qavuslar orasiga qo'ying
 dp = Dispatcher()
 
 @dp.message(CommandStart()) # <  Dispatcher Decorators vazifani bajaradi
